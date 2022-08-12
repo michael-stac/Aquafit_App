@@ -48,12 +48,14 @@ class _OnoriodeScreenState extends State<OnoriodeScreen> {
           ),
           const SizedBox(height: 22.6),
           Container(
-            decoration: BoxDecoration(borderRadius: BorderRadius.circular(10)),
+            decoration: BoxDecoration(
+              color: Colors.white,
+                borderRadius: BorderRadius.circular(10)),
             child: HorizontalDatePickerWidgetView(
               widgetWidth: MediaQuery.of(context).size.width,
-              disabledColor: const Color(0xffFFFFFF),
+              disabledColor: const Color(0xffFFFFFF),disabledTextColor: Color(0xff333333),
               selectedColor: const Color(0xff0BCE83),
-              height: 90,
+              height: 140,
               locale: "en_US",
               selectedDate: DateTime.now(),
               endDate: endDate,

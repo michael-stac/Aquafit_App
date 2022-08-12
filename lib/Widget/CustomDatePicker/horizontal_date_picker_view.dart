@@ -98,8 +98,8 @@ class HorizontalDatePickerWidgetView extends StatefulWidget {
     this.selectedTextColor = Colors.white,
     this.disabledTextColor = const Color(0xFFBDBDBD),
     this.monthFontSize = 12,
-    this.dayFontSize = 18,
-    this.weekDayFontSize = 12,
+    this.dayFontSize = 24,
+    this.weekDayFontSize = 14,
   })  : assert(dateItemComponentList.isNotEmpty,
   'dateItemComponentList  cannot be empty'),
         this.locale = locale ?? Intl.systemLocale;

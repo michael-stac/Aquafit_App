@@ -39,6 +39,7 @@ dependencies:
   percent_indicator: ^4.0.1
   horizontal_center_date_picker: ^2.1.1
   intl: ^0.17.0
+  snippet_coder_utils: ^1.0.12
 
 dev_dependencies:
   flutter_test:

@@ -1,4 +1,3 @@
-import 'package:aquafit_app/Styles/colors.dart';
 import 'package:aquafit_app/Widget/CustomDatePicker/date_picker_controller_provider.dart';
 import 'package:aquafit_app/Widget/CustomDatePicker/horizontal_date_picker_view.dart';
 import 'package:flutter/material.dart';

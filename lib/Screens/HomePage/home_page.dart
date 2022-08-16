@@ -1,8 +1,8 @@
 import 'package:aquafit_app/Screens/HomePage/onoridoe.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-
 import '../../Styles/colors.dart';
+
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);

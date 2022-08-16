@@ -31,10 +31,11 @@ class _LoginScreenState extends State<LoginScreen> {
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               GestureDetector(
-                onTap: (){
-                  Navigator.pop(context);
-                },
-                  child: const Image(image: AssetImage("assets/images/cancle.png"))),
+                  onTap: () {
+                    Navigator.pop(context);
+                  },
+                  child: const Image(
+                      image: AssetImage("assets/images/cancle.png"))),
               const SizedBox(
                 height: 79,
               ),
@@ -112,7 +113,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                 ],
               ),
-               const SizedBox(height: 31),
+              const SizedBox(height: 31),
               Row(
                 children: [
                   Text(
@@ -137,17 +138,20 @@ class _LoginScreenState extends State<LoginScreen> {
               const SizedBox(height: 51),
               GestureDetector(
                 onTap: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => const DashBoardScreen()));
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const DashBoardScreen()));
                 },
                 child: Container(
+                  width: MediaQuery.of(context).size.width,
+                  alignment: Alignment.center,
                   decoration: BoxDecoration(
                     color: const Color(0xff0BCE83),
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: Padding(
-                    padding: const EdgeInsets.only(
-                        top: 16, bottom: 16, right: 162, left: 162),
+                    padding: const EdgeInsets.symmetric(vertical: 16),
                     child: Text(
                       "LogIn",
                       style: GoogleFonts.poppins(

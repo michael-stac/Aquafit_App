@@ -14,8 +14,12 @@ class _GetStartedState extends State<GetStarted> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title:  Text("Set litres",
-          style: GoogleFonts.poppins(fontSize:14, fontWeight:FontWeight.w500, color: const Color(0xff4F4F4F)  ),
+        title: Text(
+          "Set litres",
+          style: GoogleFonts.poppins(
+              fontSize: 14,
+              fontWeight: FontWeight.w500,
+              color: const Color(0xff4F4F4F)),
         ),
         elevation: 0,
         centerTitle: true,

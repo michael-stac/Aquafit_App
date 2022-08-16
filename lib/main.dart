@@ -15,11 +15,14 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return  MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: SplashScreen(),
-    );
+    return MaterialApp(
 
+      debugShowCheckedModeBanner: false,
+      home: const SplashScreen(),
+      theme: ThemeData(
+        fontFamily: 'popppins'
+      ),
+    );
   }
 }
 
@@ -31,28 +34,25 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
-
+  @override
   void initState() {
-    Timer(const Duration(seconds: 5), () {
-      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (_) => const DashboardScreen()));
-
+    ///
+    Future.delayed(const Duration(seconds: 3), () {
+      Navigator.of(context).pushReplacement(
+          MaterialPageRoute(builder: (_) => const DashboardScreen()));
     });
     super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
-    return  const Scaffold(
+    return const Scaffold(
       backgroundColor: AppColors.secondContainer,
       body: Center(
         child: Image(
-          image:  AssetImage("assets/images/bodytext.png"),
+          image: AssetImage("assets/images/bodytext.png"),
         ),
       ),
-
     );
   }
 }
-
-
-

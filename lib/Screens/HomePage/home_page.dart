@@ -23,31 +23,35 @@ class _HomePageState extends State<HomePage> {
         elevation: 0,
       ),
       body: Column(
-
         children: [
           Column(
             children: [
               Padding(
-                padding: const EdgeInsets.only(top: 36, left: 24, right: 192,),
-                child: Text("Target Completed",
+                padding: const EdgeInsets.only(
+                  top: 36,
+                  left: 24,
+                  right: 192,
+                ),
+                child: Text(
+                  "Target Completed",
                   style: GoogleFonts.poppins(
                       fontSize: 28,
                       color: const Color(0xff4F4F4F),
                       fontWeight: FontWeight.w500),
-
                 ),
               ),
               const SizedBox(height: 68.6),
               const Padding(
                 padding: EdgeInsets.only(left: 46.59, right: 46.59),
-                child: Image(
-                    image:  AssetImage("assets/images/background.png")),
+                child: Image(image: AssetImage("assets/images/background.png")),
               ),
-              const SizedBox(height: 111,),
-
+              const SizedBox(
+                height: 111,
+              ),
               Padding(
                 padding: const EdgeInsets.only(left: 59.4, right: 59.4),
-                child: Text("You successfully drank 8 litres of water today.",
+                child: Text(
+                  "You successfully drank 8 litres of water today.",
                   style: GoogleFonts.poppins(
                       fontSize: 14,
                       color: const Color(0xff333333),
@@ -58,7 +62,6 @@ class _HomePageState extends State<HomePage> {
             ],
           ),
           const SizedBox(height: 30),
-
           GestureDetector(
             onTap: () {
               Navigator.push(

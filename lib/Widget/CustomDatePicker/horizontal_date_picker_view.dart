@@ -101,7 +101,7 @@ class HorizontalDatePickerWidgetView extends StatefulWidget {
     this.dayFontSize = 24,
     this.weekDayFontSize = 14,
   })  : assert(dateItemComponentList.isNotEmpty,
-  'dateItemComponentList  cannot be empty'),
+            'dateItemComponentList  cannot be empty'),
         this.locale = locale ?? Intl.systemLocale;
 
   @override
@@ -151,7 +151,7 @@ class _HorizontalDatePickerWidgetViewState
         controller: _scrollController,
         itemBuilder: (context, index) {
           var dateTime = widget.datePickerController.realStartDate
-              ?.add(Duration(days: index)) ??
+                  ?.add(Duration(days: index)) ??
               widget.startDate;
           DateItemState dateItemState = _getDateTimeState(dateTime);
 

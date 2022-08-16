@@ -16,9 +16,10 @@ class DashboardScreen extends StatefulWidget {
 class _DashboardScreenState extends State<DashboardScreen> {
   int currentIndex = 0;
 
+  final controller = OnboardingController();
+
   @override
   Widget build(BuildContext context) {
-    final controller = OnboardingController();
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
@@ -118,13 +119,16 @@ class _DashboardScreenState extends State<DashboardScreen> {
                 ),
                 GestureDetector(
                   onTap: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=> const LoginScreen()));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const LoginScreen()));
                   },
                   child: Container(
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
-                        border:
-                            Border.all(color: const Color(0xff0BCE83), width: 2)),
+                        border: Border.all(
+                            color: const Color(0xff0BCE83), width: 2)),
                     padding: const EdgeInsets.only(
                         left: 48.75, right: 48.71, top: 16, bottom: 16),
                     child: Text(

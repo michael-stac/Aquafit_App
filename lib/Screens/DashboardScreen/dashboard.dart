@@ -113,15 +113,14 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
                 ),
               ),
             ),
-             const SizedBox(height: 105),
+            const SizedBox(height: 105),
             Padding(
               padding: const EdgeInsets.only(left: 32.75),
               child: Row(
                 children: [
                   const Icon(Icons.not_interested_rounded),
                   Padding(
-                    padding:
-                    const EdgeInsets.only(left: 14.75, right: 80),
+                    padding: const EdgeInsets.only(left: 14.75, right: 80),
                     child: Text(
                       "Note that each cup drink is split into specific \n number of hours based on your selection.",
                       style: GoogleFonts.poppins(
@@ -134,13 +133,10 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
               ),
             ),
             SizedBox(height: 32),
-
             GestureDetector(
               onTap: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const HomePage()));
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => const HomePage()));
               },
               child: Container(
                 decoration: BoxDecoration(

@@ -14,12 +14,12 @@ class OnoriodeScreen extends StatefulWidget {
 class _OnoriodeScreenState extends State<OnoriodeScreen> {
   DatePickerController datePickerController = DatePickerController();
 
+  var selectedDate = DateTime.now();
+  DateTime startDate = DateTime(2021);
+  DateTime endDate = DateTime(2030);
+
   @override
   Widget build(BuildContext context) {
-    var now = DateTime.now();
-    DateTime startDate = now.subtract(const Duration(days: 14));
-    DateTime endDate = now.add(const Duration(days: 7));
-
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
@@ -49,15 +49,20 @@ class _OnoriodeScreenState extends State<OnoriodeScreen> {
           const SizedBox(height: 22.6),
           Container(
             decoration: BoxDecoration(
-              color: Colors.white,
-                borderRadius: BorderRadius.circular(10)),
+                color: Colors.white, borderRadius: BorderRadius.circular(10)),
             child: HorizontalDatePickerWidgetView(
               widgetWidth: MediaQuery.of(context).size.width,
-              disabledColor: const Color(0xffFFFFFF),disabledTextColor: Color(0xff333333),
+              disabledColor: const Color(0xffFFFFFF),
+              disabledTextColor: Color(0xff333333),
               selectedColor: const Color(0xff0BCE83),
               height: 140,
               locale: "en_US",
-              selectedDate: DateTime.now(),
+              onValueSelected: (value) {
+                setState(() {
+                  selectedDate = value;
+                });
+              },
+              selectedDate: selectedDate,
               endDate: endDate,
               startDate: startDate,
               datePickerController: datePickerController,

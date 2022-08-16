@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import '../../Widget/custom_inputField.dart';
 import '../DashboardScreen/dashboard.dart';
 
 
@@ -49,64 +50,13 @@ class _LoginScreenState extends State<LoginScreen> {
               Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  Container(
-                    decoration: BoxDecoration(
-                      color: const Color(0xffF8F9FA),
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                    child: TextFormField(
-                      controller: usernameController,
-                      style: const TextStyle(color: Color(0xffC4C4C4)),
-                      keyboardType: TextInputType.name,
-                      textInputAction: TextInputAction.next,
-                      decoration: InputDecoration(
-                        hintStyle: const TextStyle(
-                          color: Color(0xffC4C4C4),
-                        ),
-                        hintText: 'Username',
-                        helperStyle: GoogleFonts.poppins(
-                            fontSize: 14,
-                            fontWeight: FontWeight.w400,
-                            color: const Color(0xff949494)),
-                        enabledBorder: const OutlineInputBorder(
-                          borderSide: BorderSide.none,
-                        ),
-                        focusedBorder: const OutlineInputBorder(
-                          borderSide: BorderSide.none,
-                        ),
-                      ),
-                    ),
+                  CustomInputField(
+                    hint: "Username",
+                    controller: usernameController,
                   ),
-                  const SizedBox(
-                    height: 28,
-                  ),
-                  Container(
-                    decoration: BoxDecoration(
-                      color: const Color(0xffF8F9FA),
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                    child: TextFormField(
-                      controller: passwordController,
-                      style: const TextStyle(color: Color(0xffC4C4C4)),
-                      keyboardType: TextInputType.name,
-                      textInputAction: TextInputAction.next,
-                      decoration: InputDecoration(
-                        hintStyle: const TextStyle(
-                          color: Color(0xffC4C4C4),
-                        ),
-                        hintText: 'Password',
-                        helperStyle: GoogleFonts.poppins(
-                            fontSize: 14,
-                            fontWeight: FontWeight.w400,
-                            color: const Color(0xff949494)),
-                        enabledBorder: const OutlineInputBorder(
-                          borderSide: BorderSide.none,
-                        ),
-                        focusedBorder: const OutlineInputBorder(
-                          borderSide: BorderSide.none,
-                        ),
-                      ),
-                    ),
+                  CustomInputField(
+                    controller: passwordController,
+                    hint: " Password",
                   ),
                 ],
               ),
@@ -139,15 +89,16 @@ class _LoginScreenState extends State<LoginScreen> {
                       MaterialPageRoute(builder: (context) => const DashBoardScreen()));
                 },
                 child: Container(
+                  width:    MediaQuery.of(context).size.width,
+                  alignment: Alignment.center,
                   decoration: BoxDecoration(
                     color: const Color(0xff0BCE83),
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: Padding(
-                    padding: const EdgeInsets.only(
-                        top: 16, bottom: 16, right: 162, left: 162),
+                    padding: const EdgeInsets.symmetric(vertical: 14),
                     child: Text(
-                      "LogIn",
+                      "Log In",
                       style: GoogleFonts.poppins(
                           fontSize: 16,
                           fontWeight: FontWeight.w500,

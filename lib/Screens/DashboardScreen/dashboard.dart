@@ -33,6 +33,7 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
       body: SingleChildScrollView(
         child: Column(
           children: [
+            SizedBox(height: 38.47),
             Padding(
               padding: const EdgeInsets.only(left: 24, right: 171, bottom: 47),
               child: Column(
@@ -118,7 +119,7 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
               padding: const EdgeInsets.only(left: 32.75),
               child: Row(
                 children: [
-                  const Icon(Icons.not_interested_rounded),
+                  const Icon(Icons.info, color:  Color(0xffDADADA),),
                   Padding(
                     padding:
                     const EdgeInsets.only(left: 14.75, right: 80),
@@ -133,7 +134,7 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
                 ],
               ),
             ),
-            SizedBox(height: 32),
+            const SizedBox(height: 32),
 
             GestureDetector(
               onTap: () {
@@ -143,18 +144,23 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
                         builder: (context) => const HomePage()));
               },
               child: Container(
+                margin: const EdgeInsets.symmetric(horizontal: 24),
+                alignment: Alignment.center,
+                width: MediaQuery.of(context).size.width,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
                   color: AppColors.splashScreen,
                 ),
-                padding: const EdgeInsets.only(
-                    left: 121, right: 114, top: 16, bottom: 16),
-                child: Text(
-                  "Get Started",
-                  style: GoogleFonts.poppins(
-                      fontSize: 16,
-                      color: Colors.white,
-                      fontWeight: FontWeight.w400),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(vertical:16 ),
+
+                  child: Text(
+                    "Get Started",
+                    style: GoogleFonts.poppins(
+                        fontSize: 16,
+                        color: Colors.white,
+                        fontWeight: FontWeight.w400),
+                  ),
                 ),
               ),
             ),

@@ -57,7 +57,7 @@ class DateItemWidget extends StatelessWidget {
     return Container(
       margin: EdgeInsets.only(left: 22),
       child: Card(
-        elevation: 20,
+        elevation: 5,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(50),
         ),

@@ -32,10 +32,11 @@ class SplashScreen extends StatefulWidget {
 
 class _SplashScreenState extends State<SplashScreen> {
 
+  @override
   void initState() {
-    Timer(const Duration(seconds: 5), () {
-      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (_) => const DashboardScreen()));
-
+    Future.delayed(const Duration(seconds: 3), () {
+      Navigator.of(context).pushReplacement(
+          MaterialPageRoute(builder: (_) => const DashboardScreen()));
     });
     super.initState();
   }
@@ -43,7 +44,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return  const Scaffold(
-      backgroundColor: AppColors.secondContainer,
+      backgroundColor: Color(0xff0BCE83),
       body: Center(
         child: Image(
           image:  AssetImage("assets/images/bodytext.png"),
